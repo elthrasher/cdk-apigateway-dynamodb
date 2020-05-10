@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
-import * as cdk from '@aws-cdk/core';
-import { ApigCrudStack } from '../lib/apig-crud-stack';
 
-const app = new cdk.App();
+import { App } from '@aws-cdk/core';
+
+import { ApigCrudStack } from '../src/apig-crud-stack';
+
+const app = new App();
 new ApigCrudStack(app, 'ApigCrudStack');
