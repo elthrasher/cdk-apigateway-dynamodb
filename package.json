@@ -5,7 +5,7 @@
     "apig-crud": "bin/apig-crud.js"
   },
   "scripts": {
-    "lint": "eslint . --ext .js,.ts",
+    "lint": "eslint . --ext .ts",
     "test": "jest"
   },
   "devDependencies": {
