@@ -2,6 +2,8 @@
 
 Direct Api Gateway calls to DynamoDB using AWS Integrations.
 
+Read my post on [dev.to](https://dev.to/elthrasher/aws-cdk-api-gateway-service-integration-with-dynamodb-2ek0).
+
 ## Useful commands
 
 - `npm install` do this first

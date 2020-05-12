@@ -227,13 +227,13 @@ export class ApigCrudStack extends Stack {
       service: 'dynamodb',
     });
 
-    const responses = { methodResponses: [{ statusCode: '200' }, { statusCode: '400' }] };
+    const methodOptions = { methodResponses: [{ statusCode: '200' }, { statusCode: '400' }, { statusCode: '500' }] };
 
-    allResources.addMethod('GET', getAllIntegration, responses);
-    allResources.addMethod('POST', createIntegration, responses);
+    allResources.addMethod('GET', getAllIntegration, methodOptions);
+    allResources.addMethod('POST', createIntegration, methodOptions);
 
-    oneResource.addMethod('DELETE', deleteIntegration, responses);
-    oneResource.addMethod('GET', getIntegration, responses);
-    oneResource.addMethod('PUT', updateIntegration, responses);
+    oneResource.addMethod('DELETE', deleteIntegration, methodOptions);
+    oneResource.addMethod('GET', getIntegration, methodOptions);
+    oneResource.addMethod('PUT', updateIntegration, methodOptions);
   }
 }
